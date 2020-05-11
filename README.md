@@ -14,10 +14,11 @@ fswebcame img1.jpeg
 v4l2 commands used to test if the cammera is supported by v4l requires simple apt-get install of v4l2.
 test command:
 v4l2-ctl --set-fmt-video=width=640,height=480,pixelformat=JPEG --stream-mmap --stream-count=100 --stream-to=pics@30fps.jpeg
+
 ffplay pics@30fps.jpeg
 
 Opencv command minimal changes in current code after installing opencv on RPI
 Verify OpenCV is  installed:
 import cv2
-print (cv2.__version__)
+print ( cv2.__version__ )
 and use showvid.py to test the camera
