@@ -1,0 +1,6 @@
+Verify fswebcam is installed:
+sudo apt install fswebcam
+
+test
+fswebcam image.jpg
+fswebcam -r 1280x720 image2.jpg

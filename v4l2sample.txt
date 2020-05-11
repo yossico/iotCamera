@@ -1,0 +1,24 @@
+
+for v4l2 supporting cameras:
+
+v4l2-ctl --list-devices
+
+if not installed install v4l2-ctl by:
+sudo apt-get install -y v4l-utils
+
+we should see dev/video0 if the camera is connected
+
+v4l2-ctl --list-formats
+
+brightness 0x00980900 (int)    : min=-64 max=64 step=1 default=0 value=0
+contrast 0x00980901 (int)    : min=0 max=95 step=1 default=0 value=0
+saturation 0x00980902 (int)    : min=0 max=100 step=1 default=40 value=40
+hue 0x00980903 (int)    : min=-2000 max=2000 step=100 default=0 value=0
+white_balance_temperature_auto 0x0098090c (bool)   : default=1 value=1
+gamma 0x00980910 (int)    : min=100 max=300 step=1 default=100 value=100
+power_line_frequency 0x00980918 (menu)   : min=0 max=2 default=1 value=2
+white_balance_temperature 0x0098091a (int)    : min=2800 max=6500 step=1 default=4600 value=4600 flags=inactive
+sharpness 0x0098091b (int)    : min=1 max=7 step=1 default=3 value=3
+backlight_compensation 0x0098091c (int)    : min=0 max=3 step=1 default=0 value=0
+exposure_auto 0x009a0901 (menu)   : min=0 max=3 default=3 value=3
+exposure_absolute 0x009a0902 (int)    : min=3 max=2047 step=1 default=166 value=166 flags=inactive

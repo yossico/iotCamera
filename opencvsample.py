@@ -1,16 +1,22 @@
 import numpy as np
 import cv2
 
+fps = 5
+width =  1280
+height =720
+
 cap = cv2.VideoCapture(0)
-cap.set(cv2.CAP_PROP_FPS, 30)
+cap.set(cv2.CAP_PROP_FPS, 5)
+cap.set(3, width)
+cap.set(4, height)
 
 while(True):
     # Capture frame-by-frame
     ret, frame = cap.read()
 
     # Our operations on the frame come here
-    #gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    	
+
+
     # Display the resulting frame
     cv2.imshow('frame',frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
